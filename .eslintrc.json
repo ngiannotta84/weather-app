@@ -1,13 +1,15 @@
 {
     "env": {
         "browser": true,
-        "es2020": true
-    },
-    "extends": [
+        "es2020": true,
+        "jest": true
+      },
+      "extends": [
         "plugin:react/recommended",
-        "airbnb",
+        "airbnb", 
         "airbnb/hooks",
-    ],
+        "plugin:prettier/recommended" 
+      ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -23,5 +25,13 @@
         "react"
     ],
     "rules": {
-    }
+        "quotes": [0],
+        "react/jsx-props-no-spreading": [0],
+        "react/jsx-filename-extension": [
+          1,
+          {
+            "extensions": [".js", ".jsx"]
+          }
+        ]
+      }
 }
