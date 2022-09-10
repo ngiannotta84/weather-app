@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function LocationDeatails(props) {
+function LocationDetails(props) {
   const { city, country } = props;
   return <h1>{`${city}, ${country}`}</h1>;
 }
 LocationDetails.propTypes = {
-city: PropTypes.string,
-country: PropTypes.string,
+  city: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
 };
 
-export default LocationDeatails;
+export default LocationDetails;
