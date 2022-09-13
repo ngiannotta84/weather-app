@@ -33,7 +33,6 @@ describe("ForecastSummary", () => {
         temperature={validProps.temperature}
       />
     );
-
     expect(getByText("1111111")).toHaveClass("forecast-summary__date");
     expect(getByText("Stub description")).toHaveClass(
       "forecast-summary__description"
