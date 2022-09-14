@@ -1,5 +1,7 @@
+.weather-app {
+  margin: 0 20px;
+}
 .App {
   text-align: center;
   background-color: rgb(58, 117, 142);
 }
-
