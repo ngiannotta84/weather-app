@@ -10,14 +10,21 @@ function App({ location, forecasts }) {
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
   return (
     <div>
       <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries
+        forecasts={forecasts}
+        onForecastSelect={handleForecastSelect}
+      />
       <ForecastDetails forecast={selectedForecast} />
     </div>
   );
 }
+
 App.propTypes = {
   forecast: PropTypes.shape({
     date: PropTypes.number,
