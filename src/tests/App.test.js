@@ -1,18 +1,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "../components/App";
-import forecast from "../data/forecast.json";
 
 describe("App", () => {
-  test("renders App component correctly", () => {
-    render(
-      <App
-        location={forecast.location}
-        forecasts={forecast.forecasts}
-        forecast={forecast.forecasts[0]}
-      />
-    );
-    const h1Element = screen.getByText(/Manchester, UK/i);
+  it("shows title element correctly", async () => {
+    render(<App />);
+    const h1Element = await screen.findByText("Manchester, GB");
     expect(h1Element).toBeInTheDocument();
   });
 });

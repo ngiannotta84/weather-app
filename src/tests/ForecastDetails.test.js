@@ -6,7 +6,7 @@ describe("ForecastDetails", () => {
   const validProps = {
     date: 1111111,
     description: "Stub description",
-    icon: "800",
+    icon: 800,
     humidity: 14,
     temperature: {
       min: 12,
